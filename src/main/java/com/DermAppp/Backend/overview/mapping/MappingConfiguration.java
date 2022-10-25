@@ -11,6 +11,10 @@ public class MappingConfiguration {
         return new DematologistMapper();
     }
 
+    @Bean
+    public PatientMapper patientMapper(){
+        return new PatientMapper();
+    }
 
 
 
