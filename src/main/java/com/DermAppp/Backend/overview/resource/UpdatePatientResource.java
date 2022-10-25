@@ -7,9 +7,9 @@ import javax.validation.constraints.*;
 
 @Getter
 @Setter
-public class UpdateDermatologistResource {
+public class UpdatePatientResource {
 
-     private Long id;
+    private Long id;
 
     @NotNull
     @NotBlank
