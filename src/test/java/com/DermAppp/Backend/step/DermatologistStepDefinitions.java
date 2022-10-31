@@ -2,6 +2,7 @@ package com.DermAppp.Backend.step;
 
 import com.DermAppp.Backend.overview.resource.CreateDermatologistResource;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @CucumberContextConfiguration
 public class DermatologistStepDefinitions {
@@ -43,4 +46,11 @@ public class DermatologistStepDefinitions {
         HttpEntity<CreateDermatologistResource> request = new HttpEntity<>(resource, headers);
         responseEntity = testRestTemplate.postForEntity(endpointPath, request, String.class );
     }
+
+    @Then("A Response is received with Status {int}")
+    public void aResponseIsReceivedWithStatus(int expectedStatusCode) {
+        int actualStatusCode = responseEntity.getStatusCodeValue();
+        assertThat(expectedStatusCode).isEqualTo(actualStatusCode);
+    }
+
 }
