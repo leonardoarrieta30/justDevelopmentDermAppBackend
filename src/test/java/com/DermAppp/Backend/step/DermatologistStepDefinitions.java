@@ -2,8 +2,9 @@ package com.DermAppp.Backend.step;
 
 import com.DermAppp.Backend.overview.resource.CreateDermatologistResource;
 import com.DermAppp.Backend.overview.resource.DermatologistResource;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingException;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
