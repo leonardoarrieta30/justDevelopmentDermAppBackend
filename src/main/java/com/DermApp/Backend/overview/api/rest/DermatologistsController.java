@@ -5,6 +5,7 @@ import com.DermApp.Backend.overview.mapping.DematologistMapper;
 import com.DermApp.Backend.overview.resource.CreateDermatologistResource;
 import com.DermApp.Backend.overview.resource.DermatologistResource;
 import com.DermApp.Backend.overview.resource.UpdateDermatologistResource;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/v1/dermatologists", produces = "application/json")
+@Tag(name = "Dermatologists", description = "Create, read, update and delete dermatologists")
 public class DermatologistsController {
 
     private final DermatologistService dermatologistService;
