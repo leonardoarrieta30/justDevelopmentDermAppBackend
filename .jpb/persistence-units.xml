@@ -4,7 +4,7 @@
     <persistence-units>
       <persistence-unit name="Default">
         <packages>
-          <package value="com.DermApp.Backend" />
+          <package value="com.DermAppp.Backend" />
         </packages>
       </persistence-unit>
     </persistence-units>
