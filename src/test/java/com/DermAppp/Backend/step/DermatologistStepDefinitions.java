@@ -2,8 +2,8 @@ package com.DermAppp.Backend.step;
 
 import com.DermAppp.Backend.overview.resource.CreateDermatologistResource;
 import com.DermAppp.Backend.overview.resource.DermatologistResource;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -76,5 +76,25 @@ public class DermatologistStepDefinitions {
         }
         expectedResource.setId(actualResource.getId());
         assertThat(expectedResource).usingRecursiveComparison().isEqualTo(actualResource);
+    }
+
+    @Given("A Dermatologist Resource with values {string}, {int}, {string}, {string}, {string} is already stored")
+    public void aDermatologistResourceWithValuesIsAlreadyStored(String name, int age, String password, String address, String description) {
+        CreateDermatologistResource resource = new CreateDermatologistResource()
+                .withName(name)
+                .withAge(age)
+                .withPassword(password)
+                .withAddress(address)
+                .withDescription(description);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<CreateDermatologistResource> request = new HttpEntity<>(resource, headers);
+        responseEntity = testRestTemplate.postForEntity(endpointPath, request, String.class);
+    }
+
+    @And("A Message is included in Response Body, with values {string}")
+    public void aMessageIsIncludedInResponseBodyWithValues(String expectedMessage) {
+        String responseBody = responseEntity.getBody();
+        assertThat(responseBody).contains(expectedMessage);
     }
 }
