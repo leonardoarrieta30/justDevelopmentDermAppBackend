@@ -77,4 +77,23 @@ public class DermatologistStepDefinitions {
         expectedResource.setId(actualResource.getId());
         assertThat(expectedResource).usingRecursiveComparison().isEqualTo(actualResource);
     }
+    @Given("A Dermatologist Resource with values {string}, {int}, {string}, {string}, {string} is already stored")
+    public void aDermatologistResourceWithValuesIsAlreadyStored(String name, int age, String password, String address, String description) {
+        CreateDermatologistResource resource = new CreateDermatologistResource()
+                .withName(name)
+                .withAge(age)
+                .withPassword(password)
+                .withAddress(address)
+                .withDescription(description);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<CreateDermatologistResource> request = new HttpEntity<>(resource, headers);
+        responseEntity = testRestTemplate.postForEntity(endpointPath, request, String.class);
+    }
+
+    @And("A Message is included in Response Body, with values {string}")
+    public void aMessageIsIncludedInResponseBodyWithValues(String expectedMessage) {
+        String responseBody = responseEntity.getBody();
+        assertThat(responseBody).contains(expectedMessage);
+    }
 }
