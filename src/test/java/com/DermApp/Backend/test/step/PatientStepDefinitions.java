@@ -1,7 +1,7 @@
 package com.DermApp.Backend.test.step;
 
-import com.DermApp.Backend.overview.resource.CreatePatientResource;
-import com.DermApp.Backend.overview.resource.PatientResource;
+import com.DermApp.Backend.diagnosticIllness.resource.CreatePatientResource;
+import com.DermApp.Backend.diagnosticIllness.resource.PatientResource;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.And;

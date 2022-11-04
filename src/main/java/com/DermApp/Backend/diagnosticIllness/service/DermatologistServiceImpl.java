@@ -1,8 +1,8 @@
-package com.DermApp.Backend.overview.service;
+package com.DermApp.Backend.diagnosticIllness.service;
 
-import com.DermApp.Backend.overview.domain.model.entity.Dermatologist;
-import com.DermApp.Backend.overview.domain.persistence.DermatologistRepository;
-import com.DermApp.Backend.overview.domain.service.DermatologistService;
+import com.DermApp.Backend.diagnosticIllness.domain.model.entity.Dermatologist;
+import com.DermApp.Backend.diagnosticIllness.domain.persistence.DermatologistRepository;
+import com.DermApp.Backend.diagnosticIllness.domain.service.DermatologistService;
 import com.DermApp.Backend.shared.exception.ResourceNotFoundException;
 import com.DermApp.Backend.shared.exception.ResourceValidationException;
 import org.springframework.data.domain.Page;

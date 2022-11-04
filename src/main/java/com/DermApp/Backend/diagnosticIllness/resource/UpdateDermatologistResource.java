@@ -1,4 +1,4 @@
-package com.DermApp.Backend.overview.resource;
+package com.DermApp.Backend.diagnosticIllness.resource;
 
 import lombok.Getter;
 import lombok.Setter;

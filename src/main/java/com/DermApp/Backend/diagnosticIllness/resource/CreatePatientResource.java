@@ -1,4 +1,4 @@
-package com.DermApp.Backend.overview.resource;
+package com.DermApp.Backend.diagnosticIllness.resource;
 
 import lombok.*;
 
@@ -9,8 +9,7 @@ import javax.validation.constraints.*;
 @With
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateDermatologistResource {
-
+public class CreatePatientResource {
     @NotNull
     @NotBlank
     @Size(max = 60)

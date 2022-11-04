@@ -1,4 +1,4 @@
-package com.DermApp.Backend.overview.resource;
+package com.DermApp.Backend.diagnosticIllness.resource;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @With
 @NoArgsConstructor
 @AllArgsConstructor
-public class PatientResource {
+public class DermatologistResource {
     private Long id;
     private String name;
     private int age;

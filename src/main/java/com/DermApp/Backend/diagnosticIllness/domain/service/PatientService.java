@@ -1,6 +1,6 @@
-package com.DermApp.Backend.overview.domain.service;
+package com.DermApp.Backend.diagnosticIllness.domain.service;
 
-import com.DermApp.Backend.overview.domain.model.entity.Patient;
+import com.DermApp.Backend.diagnosticIllness.domain.model.entity.Patient;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

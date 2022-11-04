@@ -1,6 +1,6 @@
-package com.DermApp.Backend.overview.domain.persistence;
+package com.DermApp.Backend.diagnosticIllness.domain.persistence;
 
-import com.DermApp.Backend.overview.domain.model.entity.Dermatologist;
+import com.DermApp.Backend.diagnosticIllness.domain.model.entity.Dermatologist;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package com.DermApp.Backend.overview.api.rest;
+package com.DermApp.Backend.diagnosticIllness.api.rest;
 
-import com.DermApp.Backend.overview.domain.service.DermatologistService;
-import com.DermApp.Backend.overview.mapping.DematologistMapper;
-import com.DermApp.Backend.overview.resource.CreateDermatologistResource;
-import com.DermApp.Backend.overview.resource.DermatologistResource;
-import com.DermApp.Backend.overview.resource.UpdateDermatologistResource;
+import com.DermApp.Backend.diagnosticIllness.domain.service.DermatologistService;
+import com.DermApp.Backend.diagnosticIllness.mapping.DematologistMapper;
+import com.DermApp.Backend.diagnosticIllness.resource.CreateDermatologistResource;
+import com.DermApp.Backend.diagnosticIllness.resource.DermatologistResource;
+import com.DermApp.Backend.diagnosticIllness.resource.UpdateDermatologistResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

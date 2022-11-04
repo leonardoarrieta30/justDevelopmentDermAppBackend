@@ -1,9 +1,9 @@
-package com.DermApp.Backend.overview.mapping;
+package com.DermApp.Backend.diagnosticIllness.mapping;
 
-import com.DermApp.Backend.overview.domain.model.entity.Dermatologist;
-import com.DermApp.Backend.overview.resource.CreateDermatologistResource;
-import com.DermApp.Backend.overview.resource.DermatologistResource;
-import com.DermApp.Backend.overview.resource.UpdateDermatologistResource;
+import com.DermApp.Backend.diagnosticIllness.domain.model.entity.Dermatologist;
+import com.DermApp.Backend.diagnosticIllness.resource.CreateDermatologistResource;
+import com.DermApp.Backend.diagnosticIllness.resource.DermatologistResource;
+import com.DermApp.Backend.diagnosticIllness.resource.UpdateDermatologistResource;
 import com.DermApp.Backend.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
