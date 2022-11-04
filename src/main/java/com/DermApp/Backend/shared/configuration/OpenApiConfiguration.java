@@ -24,7 +24,7 @@ public class OpenApiConfiguration {
                         .title("DermApp API")
                         .version(applicationVersion)
                         .description(applicationDescription)
-                        .termsOfService("https://dermApp.com/tos")
+                        .termsOfService("https://www.privacypolicies.com/live/0c6fe5e8-7fdc-4545-991a-da701a306903")
                         .license(new License()
                                 .name("Apache 2.0 License")
                                 .url("https://dermApp.com/license"))
