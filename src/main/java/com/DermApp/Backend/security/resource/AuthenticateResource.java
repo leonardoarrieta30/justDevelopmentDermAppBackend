@@ -1,6 +1,5 @@
 package com.DermApp.Backend.security.resource;
 
-
 import lombok.*;
 
 import java.util.List;

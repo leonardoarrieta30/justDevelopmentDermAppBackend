@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-
 public class AuthenticateRequest {
     @NotNull
     @NotBlank
